@@ -25,15 +25,18 @@ public class Controller : MonoBehaviour
     {
         var currentPosition = this.gameObject.transform.position;
         var velocity = Vector3.Distance(currentPosition, lastPosition);
-        GetComponent<Animator>().SetFloat("forwardSpeed", velocity);
+        GetComponent<Animator>().SetFloat("forwardSpeed", 0);
+        GetComponent<Animator>().SetFloat("backwardSpeed", 0);
 
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Z))
         {
+            GetComponent<Animator>().SetFloat("forwardSpeed", velocity);
             this.gameObject.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * speed);
         }
 
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
+            GetComponent<Animator>().SetFloat("backwardSpeed", velocity);
             this.gameObject.transform.Translate(new Vector3(0, 0, -1) * Time.deltaTime * speed);
         }
 
