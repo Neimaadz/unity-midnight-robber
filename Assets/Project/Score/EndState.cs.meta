@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Project/Character/Controller.cs.meta
+guid: 33cf99ac49eb24a5ba4e63afd4643c9f
+=======
 guid: 1fa1899c7fcc6fd4f95d8736a4c02612
+>>>>>>> main:Assets/Project/Score/EndState.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

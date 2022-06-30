@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Blink/Art/Characters/LowPoly/Editor/MaterialTilingOffset.cs.meta
+guid: a694497b221754a72a3abea36b5fdeee
+=======
 guid: 2c83d86fb6ad3d34b8f5a0bf6525d287
+>>>>>>> main:Assets/Project/GameLoader.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
