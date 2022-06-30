@@ -15,7 +15,7 @@ public class Camera : MonoBehaviour
     // LateUpdate is called after all action are done
     void LateUpdate()
     {
-        transform.position = player.transform.position + new Vector3(0, 4, -6);
-        transform.eulerAngles = new Vector3(30, 0, 0);
+        transform.position = player.transform.position + new Vector3(0, 6, -4);
+        transform.eulerAngles = new Vector3(50, 0, 0);
     }
 }
