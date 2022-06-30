@@ -16,6 +16,6 @@ public class Camera : MonoBehaviour
     void LateUpdate()
     {
         transform.position = player.transform.position + new Vector3(0, 4, -6);
-        transform.eulerAngles = new Vector3(15, 0, 0);
+        transform.eulerAngles = new Vector3(30, 0, 0);
     }
 }
