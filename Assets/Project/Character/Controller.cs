@@ -7,7 +7,6 @@ public class Controller : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] private float rotationSpeed;
-    private Vector3 currentPosition;
     private Vector3 lastPosition;
 
     // Start is called before the first frame update
@@ -24,7 +23,7 @@ public class Controller : MonoBehaviour
 
     void Move()
     {
-        currentPosition = this.gameObject.transform.position;
+        var currentPosition = this.gameObject.transform.position;
         var velocity = Vector3.Distance(currentPosition, lastPosition);
         GetComponent<Animator>().SetFloat("forwardSpeed", velocity);
 
