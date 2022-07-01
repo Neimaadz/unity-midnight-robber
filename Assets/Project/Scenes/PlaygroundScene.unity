@@ -156,7 +156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -426,6 +426,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 747113340}
+  backwardCamValue: 4
+  upCamValue: 4
+  camTransition: 0.25
 --- !u!81 &749470863
 AudioListener:
   m_ObjectHideFlags: 0
