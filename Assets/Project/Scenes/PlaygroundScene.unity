@@ -1065,11 +1065,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: abf9c9ddc7f2f9d4fb450f472036aee7, type: 3}
   m_PrefabInstance: {fileID: 1062495851}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &365516196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1971964791502700, guid: 335e5cedc041a614c86ff1f3feee693a, type: 3}
-  m_PrefabInstance: {fileID: 2012706860}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410648391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,9 +1865,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3fa710bda4aa4f409de61059873a0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToFind_1: {fileID: 1945238761}
-  objectToFind_2: {fileID: 365516196}
-  objectToFind_3: {fileID: 1064135807}
+  objectToFind1: {fileID: 0}
+  objectToFind2: {fileID: 0}
+  objectToFind3: {fileID: 0}
 --- !u!1 &749470861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,11 +2750,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abf9c9ddc7f2f9d4fb450f472036aee7, type: 3}
---- !u!1 &1064135807 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1191933010613832, guid: 42db2464346d91c47b812288879592f1, type: 3}
-  m_PrefabInstance: {fileID: 1191482718}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1073132943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4044,11 +4034,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1945238761 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2464988732922791739, guid: 0bb3763a445b5de4eb87236307133810, type: 3}
-  m_PrefabInstance: {fileID: 533061712}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1952761256 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6100434731370130537, guid: 51ed19930404371458e8d3152edbad78, type: 3}
@@ -4254,7 +4239,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1971964791502700, guid: 335e5cedc041a614c86ff1f3feee693a, type: 3}
       propertyPath: m_Name
-      value: Paint_sheep
+      value: paint_sheep
       objectReference: {fileID: 0}
     - target: {fileID: 4049035120191236, guid: 335e5cedc041a614c86ff1f3feee693a, type: 3}
       propertyPath: m_RootOrder
