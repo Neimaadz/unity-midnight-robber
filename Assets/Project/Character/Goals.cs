@@ -1,59 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using TMPro;
 
-public class Goals : MonoBehaviour
-{
-    private int count;
+public class Goals: MonoBehaviour {
+  private int count;
 
-    [SerializeField]
-    public TextMeshProUGUI runText;
+  [SerializeField]
+  public Light light;
 
-    [SerializeField]
-    public TextMeshProUGUI sheepText;
+  [SerializeField]
+  public TextMeshProUGUI runText;
 
-    [SerializeField]
-    public TextMeshProUGUI phoneText;
+  [SerializeField]
+  public TextMeshProUGUI sheepText;
 
-    [SerializeField]
-    public TextMeshProUGUI dollarText;
+  [SerializeField]
+  public TextMeshProUGUI phoneText;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+  [SerializeField]
+  public TextMeshProUGUI dollarText;
+
+  // Start is called before the first frame update
+  void Start() {}
+
+  // Update is called once per frame
+  void Update() {
+    if (count == 3) {
+      light.color = Color.green;
+      StaticTimer.objectsFound = true;
+      runText.text = "Time to go, RUN !!";
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (count == 3)
-        {
-            StaticTimer.objectsFound = true;
-            runText.text = "Time to go, RUN !!";
-            
-        }
+  }
+  private void OnCollisionEnter(Collision collision) {
+    if (collision.gameObject.name.Equals("dollars")) {
+      Destroy(collision.gameObject);
+      count++;
+      dollarText.text = "";
+    } else if (collision.gameObject.name.Equals("smartphone")) {
+      Destroy(collision.gameObject);
+      count++;
+      phoneText.text = "";
+    } else if (collision.gameObject.name.Equals("paint_sheep")) {
+      Destroy(collision.gameObject);
+      count++;
+      sheepText.text = "";
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name.Equals("dollars"))
-        {
-            Destroy(collision.gameObject);
-            count++;
-            dollarText.text = "";
-        }
-        else if (collision.gameObject.name.Equals("smartphone"))
-        {
-            Destroy(collision.gameObject);
-            count++;
-            phoneText.text = "";
-        }
-        else if (collision.gameObject.name.Equals("paint_sheep"))
-        {
-            Destroy(collision.gameObject);
-            count++;
-            sheepText.text = "";
-        }
-    }
+  }
 }
