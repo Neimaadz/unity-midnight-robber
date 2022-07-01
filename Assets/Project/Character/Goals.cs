@@ -1,10 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Goals : MonoBehaviour
 {
     private int count;
+
+    [SerializeField]
+    public TextMeshProUGUI runText;
+
+    [SerializeField]
+    public TextMeshProUGUI sheepText;
+
+    [SerializeField]
+    public TextMeshProUGUI phoneText;
+
+    [SerializeField]
+    public TextMeshProUGUI dollarText;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +30,8 @@ public class Goals : MonoBehaviour
         if (count == 3)
         {
             StaticTimer.objectsFound = true;
+            runText.text = "Time to go, RUN !!";
+            
         }
     }
 
@@ -26,16 +41,19 @@ public class Goals : MonoBehaviour
         {
             Destroy(collision.gameObject);
             count++;
+            dollarText.text = "";
         }
         else if (collision.gameObject.name.Equals("smartphone"))
         {
             Destroy(collision.gameObject);
             count++;
+            phoneText.text = "";
         }
         else if (collision.gameObject.name.Equals("paint_sheep"))
         {
             Destroy(collision.gameObject);
             count++;
+            sheepText.text = "";
         }
     }
 }
