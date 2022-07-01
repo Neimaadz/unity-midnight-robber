@@ -26,6 +26,8 @@ public class GameTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        StaticTimer.timer = timeRemaining;
+
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
@@ -35,7 +37,6 @@ public class GameTimer : MonoBehaviour
 
         } else
         {
-            StaticTimer.timer = timeRemaining;
             SceneManager.LoadScene("ScoreScene");
         }
     }
