@@ -16,7 +16,8 @@ public class EndState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int timeLeft = 0; // Stub before we get the time
+        Debug.Log(StaticTimer.timer);
+        float timeLeft = StaticTimer.timer; // Time remaining
         if (timeLeft > 0)   // Win
         {
             GetComponent<TextMeshProUGUI>().text = "You win !!";
