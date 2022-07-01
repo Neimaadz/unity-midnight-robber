@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Project/Camera/Camera.cs.meta
-guid: 2fa29a83f783342b4b8461d000d4293c
-=======
-guid: b0a71e0091c8b2449a927ad44a1dc8b2
->>>>>>> main:Assets/Project/Playground/MovePlayerTest.cs.meta
+guid: 8aa8a3d0432722a47b4f95373ae4b268
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
