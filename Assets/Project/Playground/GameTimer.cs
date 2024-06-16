@@ -16,17 +16,13 @@ public class GameTimer : MonoBehaviour
     float minutes;
     float seconds;
 
-
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    void Start() { }
 
     // Update is called once per frame
     void Update()
     {
-        StaticTimer.timer = timeRemaining;
+        GlobalParams.timer = timeRemaining;
 
         if (timeRemaining > 0)
         {
@@ -34,8 +30,8 @@ public class GameTimer : MonoBehaviour
             minutes = Mathf.FloorToInt(timeRemaining / 60);
             seconds = Mathf.FloorToInt(timeRemaining % 60);
             textTimer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-
-        } else
+        }
+        else
         {
             SceneManager.LoadScene("ScoreScene");
         }

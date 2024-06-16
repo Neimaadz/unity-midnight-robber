@@ -19,8 +19,11 @@ public class EndState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(StaticTimer.timer);
-        float timeLeft = StaticTimer.timer; // Time remaining
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        float timeLeft = GlobalParams.timer; // Time remaining
+
         if (timeLeft > 0)   // Win
         {
             minutes = Mathf.FloorToInt(timeLeft / 60);
@@ -30,7 +33,8 @@ public class EndState : MonoBehaviour
             GameObject image = GameObject.Find("Image");
             image.GetComponent<Image>().sprite = winImage;
 
-        } else // Lose
+        }
+        else // Lose
         {
             GetComponent<TextMeshProUGUI>().text = "You lose :(";
 
@@ -40,8 +44,5 @@ public class EndState : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update() { }
 }
